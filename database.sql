@@ -1,6 +1,4 @@
-
-
-CREATE DATABASE IF NOT EXISTS quickeat;
+CREATE DATABASE quickeat;
 USE quickeat;
 
 -- Users table
@@ -42,11 +40,6 @@ CREATE TABLE orders (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
 );
-
--- Sample data
-INSERT INTO users (name, email, password, role) VALUES
-('Admin', 'admin@quickeat.com', '1234', 'admin'),
-('Ram Thapa', 'ram@gmail.com', '1234', 'customer');
 
 INSERT INTO restaurants (name, category, delivery_time) VALUES
 ('Momo House', 'Nepali', 25),
